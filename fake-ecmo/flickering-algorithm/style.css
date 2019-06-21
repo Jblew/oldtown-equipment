@@ -1,0 +1,94 @@
+html,
+body {
+    color: #eee;
+    background: #123;
+}
+
+
+
+/* based on https://stackoverflow.com/questions/38641653/divide-circle-into-three-parts-using-css3 */
+.circle-outer {
+    position: relative;
+    border: 1px solid black;
+    padding: 0;
+    margin: 1em auto;
+    width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    list-style: none;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border: 1px solid black;
+    padding: 0;
+    margin: 1em auto;
+    width: 580px;
+    height: 580px;
+    border-radius: 50%;
+    list-style: none;
+    overflow: hidden;
+    left: -70px;
+    top: -95px;
+}
+
+li {}
+
+li .background {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0% 100%;
+}
+
+.content {
+    position: absolute;
+    z-index: 30;
+    text-align: center;
+    width: 200px;
+}
+
+.content.first {
+    left: 15%;
+    top: 30%;
+}
+
+.content.second {
+    right: 15%;
+    top: 30%
+}
+
+.content.third {
+    bottom: 15%;
+    left: 32%
+}
+
+li:first-child .background {
+    transform: rotate(0deg) skewY(30deg);
+}
+
+li:nth-child(2) .background {
+    transform: rotate(120deg) skewY(30deg);
+}
+
+li:nth-child(3) .background {
+    transform: rotate(240deg) skewY(30deg);
+}
+
+
+
+#field1 {
+    background: hsl(182, 100%, 50%);
+}
+
+#field2 {
+    background: hsl(182, 100%, 50%);
+}
+
+#field3 {
+    background: hsl(182, 100%, 50%);
+}
