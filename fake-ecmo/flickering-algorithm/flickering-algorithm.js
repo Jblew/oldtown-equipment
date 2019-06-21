@@ -1,13 +1,14 @@
+const fps = 1000 / 75;
+const minFluorescent = 0.5;
+const minRandom = 0.85;
+const max = 0.9;
+const fluorescentFlickerPercent = 0.985;
+
 function flickeringAnimation(elem) {
     console.log(elem);
-    var id = setInterval(frame, 75);
+    var id = setInterval(frame, 1000 / fps);
 
     function frame() {
-        const minFluorescent = 0.5;
-        const minRandom = 0.85;
-        const max = 0.9;
-        const fluorescentFlickerPercent = 0.985;
-
         let brightness = max;
 
         let random = Math.random();
